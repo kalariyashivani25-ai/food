@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100;
+  }
+}
+
+/* Custom Premium UI Styling Classes */
+
+/* Glassmorphism Panel style */
+.glass-panel {
+  @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/40 shadow-xl shadow-slate-100/10 dark:shadow-black/20;
+}
+
+/* Dynamic glow effect borders */
+.brand-glow {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25), 0 0 10px -6px rgba(16, 185, 129, 0.2);
+}
+
+.brand-glow-hover:hover {
+  box-shadow: 0 0 30px -3px rgba(16, 185, 129, 0.4), 0 0 15px -5px rgba(16, 185, 129, 0.3);
+}
+
+/* Dark mode glowing radial spheres */
+.bg-glow-radial {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.15) 0%, rgba(15, 118, 110, 0.05) 50%, transparent 100%);
+}
+
+.bg-glow-blue-radial {
+  background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+}
+
+.bg-glow-rose-radial {
+  background: radial-gradient(circle at 80% 80%, rgba(244, 63, 94, 0.08) 0%, transparent 70%);
+}
+
+/* Custom Premium scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors;
+}
+
+/* Typing Indicator Animation dots */
+@keyframes bounce-dots {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.typing-dot {
+  animation: bounce-dots 1s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Styled text animations */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 font-display;
+}
